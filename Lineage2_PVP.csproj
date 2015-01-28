@@ -1,0 +1,105 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{ECA7989F-7A8A-462E-B269-7615793010EC}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Lineage2_PVP</RootNamespace>
+    <AssemblyName>Lineage2_PVP</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Adaptateur\Adaptateur.cs" />
+    <Compile Include="Adaptateur\Adapte.cs" />
+    <Compile Include="Adaptateur\Cible.cs" />
+    <Compile Include="Fabrique\Abstraite\FabriqueAbstraite.cs" />
+    <Compile Include="Fabrique\Concrete\FabriqueAeoreHealer.cs" />
+    <Compile Include="Fabrique\Concrete\FabriqueFeohWizard.cs" />
+    <Compile Include="Fabrique\Concrete\FabriqueIssEnchanter.cs" />
+    <Compile Include="Fabrique\Concrete\FabriqueOthellRogue.cs" />
+    <Compile Include="Fabrique\Concrete\FabriqueSigelKnight.cs" />
+    <Compile Include="Fabrique\Concrete\FabriqueTyrrWarrior.cs" />
+    <Compile Include="Fabrique\Concrete\FabriqueWynnSummoner.cs" />
+    <Compile Include="Fabrique\Concrete\FabriqueYulArcher.cs" />
+    <Compile Include="Decorateur\Personnage\Concret\AeoreHealer.cs" />
+    <Compile Include="Composite\Armes\Concrete\Arc.cs" />
+    <Compile Include="Composite\Armes\Abstraite\ArmeAbstraite.cs" />
+    <Compile Include="Composite\Armes\Concrete\Dague.cs" />
+    <Compile Include="Composite\Armes\Concrete\Dual.cs" />
+    <Compile Include="Composite\Armure\Abstraite\ArmureAbstraite.cs" />
+    <Compile Include="Composite\Armure\Concrete\ArmureLegere.cs" />
+    <Compile Include="Composite\Armure\Concrete\ArmureLourde.cs" />
+    <Compile Include="Composite\Bijou\Concret\Bague.cs" />
+    <Compile Include="Composite\Bijou\Abstrait\BijouAbstrait.cs" />
+    <Compile Include="Composite\Bijou\Concret\BoucleOreille.cs" />
+    <Compile Include="Composite\Bijou\Concret\Collier.cs" />
+    <Compile Include="Enum\EnumBijou.cs" />
+    <Compile Include="Enum\EnumArmure.cs" />
+    <Compile Include="Enum\EnumArmes.cs" />
+    <Compile Include="Composite\Armes\Concrete\Epee.cs" />
+    <Compile Include="Decorateur\Personnage\Concret\FeohWizard.cs" />
+    <Compile Include="Decorateur\Personnage\Concret\IssEnchanter.cs" />
+    <Compile Include="Decorateur\Personnage\Concret\OthellRogue.cs" />
+    <Compile Include="Decorateur\Personnage\Abstrait\PersonnageAbstrait.cs" />
+    <Compile Include="Decorateur\Personnage\Abstrait\PersonnageFighterAbstrait.cs" />
+    <Compile Include="Decorateur\Personnage\Abstrait\PersonnageMysticAbstrait.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Composite\Armes\Concrete\Sceptre.cs" />
+    <Compile Include="Composite\Armure\Concrete\Robe.cs" />
+    <Compile Include="Decorateur\Personnage\Concret\SigelKnight.cs" />
+    <Compile Include="Decorateur\Personnage\Concret\TyrrWarrior.cs" />
+    <Compile Include="Decorateur\Personnage\Concret\WynnSummoner.cs" />
+    <Compile Include="Decorateur\Personnage\Concret\YulArcher.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Etat\" />
+    <Folder Include="FabriqueAbstraite\" />
+    <Folder Include="Observateur\" />
+    <Folder Include="Singleton\" />
+    <Folder Include="Strategie\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

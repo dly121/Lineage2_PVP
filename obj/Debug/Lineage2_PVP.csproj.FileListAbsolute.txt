@@ -1,0 +1,6 @@
+c:\users\david\documents\visual studio 2012\Projects\Lineage2_PVP\Lineage2_PVP\bin\Debug\Lineage2_PVP.exe.config
+c:\users\david\documents\visual studio 2012\Projects\Lineage2_PVP\Lineage2_PVP\bin\Debug\Lineage2_PVP.exe
+c:\users\david\documents\visual studio 2012\Projects\Lineage2_PVP\Lineage2_PVP\bin\Debug\Lineage2_PVP.pdb
+c:\users\david\documents\visual studio 2012\Projects\Lineage2_PVP\Lineage2_PVP\obj\Debug\Lineage2_PVP.csprojResolveAssemblyReference.cache
+c:\users\david\documents\visual studio 2012\Projects\Lineage2_PVP\Lineage2_PVP\obj\Debug\Lineage2_PVP.exe
+c:\users\david\documents\visual studio 2012\Projects\Lineage2_PVP\Lineage2_PVP\obj\Debug\Lineage2_PVP.pdb
