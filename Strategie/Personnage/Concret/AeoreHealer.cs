@@ -11,18 +11,20 @@ namespace Lineage2_PVP
         public AeoreHealer(String unNom)
             : base(unNom)
         {
-            base.personnage.Nom = unNom;
-            base.personnage.HP = 4000;
-            base.personnage.MAtk = 2000;
-            base.personnage.MDef = 2000;
-            base.personnage.PAtk = 1000;
-            base.personnage.PDef = 1000;
-            base.personnage.MaxHP = (base.personnage.HP + base.personnage.MDef + base.personnage.PDef);
+            Nom = unNom;
+            HP = 4000;
+            MAtk = 2000;
+            MDef = 2000;
+            PAtk = 1000;
+            PDef = 1000;
+            MaxHP = (HP + MDef + PDef);
 
             base.SoinQuantite = 3000;
             base.AttaqueMagiquePuissance = 500;
             base.BuffHPQuantite = 1.15;
             base.DebuffHPQuantite = 0.85;
+
+            TousLesPersonnages.Add(this);
         }
 
 
@@ -33,20 +35,20 @@ namespace Lineage2_PVP
         //        switch (uneArmure)
         //        {
         //            case EnumArmure.ArmureLegere:
-        //                base.personnage.Armure = new ArmureLegere();
-        //                base.personnage.AugmenterStatsArmure();
+        //                Armure = new ArmureLegere();
+        //                AugmenterStatsArmure();
         //                break;
         //            case EnumArmure.ArmureLourde:
-        //                base.personnage.Armure = new ArmureLourde();
-        //                base.personnage.AugmenterStatsArmure();
+        //                Armure = new ArmureLourde();
+        //                AugmenterStatsArmure();
         //                break;
         //            case EnumArmure.Robe:
-        //                base.personnage.Armure = new Robe();
-        //                base.personnage.AugmenterStatsArmure();
+        //                Armure = new Robe();
+        //                AugmenterStatsArmure();
         //                break;
         //            default:
-        //                base.personnage.Armure = new ArmureLegere();
-        //                base.personnage.AugmenterStatsArmure();
+        //                Armure = new ArmureLegere();
+        //                AugmenterStatsArmure();
         //                break;
         //        }
         //    }
@@ -59,20 +61,20 @@ namespace Lineage2_PVP
         //        switch (unBijou)
         //        {
         //            case EnumBijou.Collier:
-        //                base.personnage.Bijou = new Collier();
-        //                base.personnage.AugmenterStatsBijou();
+        //                Bijou = new Collier();
+        //                AugmenterStatsBijou();
         //                break;
         //            case EnumBijou.BoucleOreille:
-        //                base.personnage.Bijou = new BoucleOreille();
-        //                base.personnage.AugmenterStatsBijou();
+        //                Bijou = new BoucleOreille();
+        //                AugmenterStatsBijou();
         //                break;
         //            case EnumBijou.Bague:
-        //                base.personnage.Bijou = new Bague();
-        //                base.personnage.AugmenterStatsBijou();
+        //                Bijou = new Bague();
+        //                AugmenterStatsBijou();
         //                break;
         //            default:
-        //                base.personnage.Bijou = new Bague();
-        //                base.personnage.AugmenterStatsBijou();
+        //                Bijou = new Bague();
+        //                AugmenterStatsBijou();
         //                break;
         //        }
         //    }
@@ -85,28 +87,28 @@ namespace Lineage2_PVP
         //        switch (uneArme)
         //        {
         //            case EnumArme.Arc:
-        //                base.personnage.Arme = new Arc();
-        //                base.personnage.AugmenterStatsArme();
+        //                Arme = new Arc();
+        //                AugmenterStatsArme();
         //                break;
         //            case EnumArme.Dague:
-        //                base.personnage.Arme = new Dague();
-        //                base.personnage.AugmenterStatsArme();
+        //                Arme = new Dague();
+        //                AugmenterStatsArme();
         //                break;
         //            case EnumArme.DualHache:
-        //                base.personnage.Arme = new Dual();
-        //                base.personnage.AugmenterStatsArme();
+        //                Arme = new Dual();
+        //                AugmenterStatsArme();
         //                break;
         //            case EnumArme.Epee:
-        //                base.personnage.Arme = new Epee();
-        //                base.personnage.AugmenterStatsArme();
+        //                Arme = new Epee();
+        //                AugmenterStatsArme();
         //                break;
         //            case EnumArme.Sceptre:
-        //                base.personnage.Arme = new Sceptre();
-        //                base.personnage.AugmenterStatsArme();
+        //                Arme = new Sceptre();
+        //                AugmenterStatsArme();
         //                break;
         //            default:
-        //                base.personnage.Arme = new Dague();
-        //                base.personnage.AugmenterStatsArme();
+        //                Arme = new Dague();
+        //                AugmenterStatsArme();
         //                break;
         //        }
         //    }
@@ -114,24 +116,24 @@ namespace Lineage2_PVP
 
         //public override void AugmenterStatsArmure()
         //{
-        //    base.personnage.PDef += base.personnage.Armure.PDef;
+        //    PDef += Armure.PDef;
         //}
 
         //public override void AugmenterStatsBijou()
         //{
-        //    base.personnage.MDef += base.personnage.Bijou.MDef;
+        //    MDef += Bijou.MDef;
         //}
 
         //public override void AugmenterStatsArme()
         //{
-        //    base.personnage.PAtk += base.personnage.Arme.PAtk;
-        //    base.personnage.MAtk += base.personnage.Arme.MAtk;
+        //    PAtk += Arme.PAtk;
+        //    MAtk += Arme.MAtk;
         //}
 
 
         public override void Soigner(PersonnageAbstrait unPersonnage)
         {
-            if (base.personnage.HP > 0)
+            if (HP > 0)
             {
                 if (unPersonnage.HP == 0)
                     Console.WriteLine("{0} est mort: Soin impossible!", unPersonnage.Nom);
@@ -139,12 +141,12 @@ namespace Lineage2_PVP
                     unPersonnage.HP += SoinQuantite;
                 else unPersonnage.HP = unPersonnage.MaxHP;
             }
-            else Console.WriteLine("{0} est mort: Soin impossible", base.personnage.Nom);
+            else Console.WriteLine("{0} est mort: Soin impossible", Nom);
         }
 
         public override void AttaqueMagique(PersonnageAbstrait unPersonnage)
         {
-            if (base.personnage.HP > 0)
+            if (HP > 0)
             {
                 if (unPersonnage.HP == 0)
                     Console.WriteLine("{0} est mort: Attaque magique impossible!", unPersonnage.Nom);
@@ -152,40 +154,85 @@ namespace Lineage2_PVP
                     unPersonnage.HP -= AttaqueMagiquePuissance;
                 else unPersonnage.HP = 0;
             }
-            else Console.WriteLine("{0} est mort: Attaque magique impossible!", base.personnage.Nom);
+            else Console.WriteLine("{0} est mort: Attaque magique impossible!", Nom);
         }
 
         public override void BuffHP(PersonnageAbstrait unPersonnage)
         {
-            if (base.personnage.HP > 0)
+            if (HP > 0)
             {
                 if (unPersonnage.HP == 0)
                     Console.WriteLine("{0} est mort: Buff HP impossible!", unPersonnage.Nom);
                 else unPersonnage.MaxHP *= BuffHPQuantite;
             }
-            else Console.WriteLine("{0} est mort: Buff HP impossible!", base.personnage.Nom);
+            else Console.WriteLine("{0} est mort: Buff HP impossible!", Nom);
         }
 
         public override void DebuffHP(PersonnageAbstrait unPersonnage)
         {
-            if (base.personnage.HP > 0)
+            if (HP > 0)
             {
                 if (unPersonnage.HP == 0)
                     Console.WriteLine("{0} est mort: Debuff HP impossible!", unPersonnage.Nom);
                 else unPersonnage.MaxHP *= DebuffHPQuantite;
             }
-            else Console.WriteLine("{0} est mort: Debuff HP impossible!", base.personnage.Nom);
+            else Console.WriteLine("{0} est mort: Debuff HP impossible!", Nom);
         }
 
 
         public override void AjusterSoinQuantite()
         {
-            base.SoinQuantite += base.personnage.MAtk + base.personnage.Arme.MAtk;
+            base.SoinQuantite += MAtk + Arme.MAtk;
         }
 
         public override void AjusterAttaqueMagiquePuissance()
         {
-            base.AttaqueMagiquePuissance += base.personnage.MAtk;
+            base.AttaqueMagiquePuissance += MAtk;
+        }
+
+        public override void Attaque_CoupDague(PersonnageAbstrait unPersonnage)
+        {
+            Console.WriteLine("{0} ne dispose pas les compétences du coup de dague", Nom);
+        }
+
+        public override void Attaque_CoupEpee(PersonnageAbstrait unPersonnage)
+        {
+            Console.WriteLine("{0} ne dispose pas les compétences du coup d'épée", Nom);
+        }
+
+        public override void Attaque_CoupDual(PersonnageAbstrait unPersonnage)
+        {
+            Console.WriteLine("{0} ne dispose pas les compétences du coup de dual", Nom);
+        }
+
+        public override void Attaque_TirerFleche(PersonnageAbstrait unPersonnage)
+        {
+            Console.WriteLine("{0} ne dispose pas les compétences avec un arc", Nom);
+        }
+
+        public override void AjusterPuissanceDague()
+        {
+            Console.WriteLine("{0} ne dispose pas les compétences pour ajuster la puissance d'une dague", Nom);
+        }
+
+        public override void AjusterPuissanceArc()
+        {
+            Console.WriteLine("{0} ne dispose pas les compétences pour ajuster la puissance d'un arc", Nom);
+        }
+
+        public override void AjusterPuissanceDual()
+        {
+            Console.WriteLine("{0} ne dispose pas les compétences pour ajuster la puissance de dual", Nom);
+        }
+
+        public override void AjusterPuissanceEpee()
+        {
+            Console.WriteLine("{0} ne dispose pas les compétences pour ajuster la puissance d'une épée", Nom);
+        }
+
+        public override void InvoquerSummon(string unNomDeBete)
+        {
+            Console.WriteLine("{0} ne dispose pas des compétences de summoner pour invoquer une bête", Nom);
         }
     }
 }

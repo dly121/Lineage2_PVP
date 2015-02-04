@@ -53,46 +53,47 @@
     <Compile Include="Fabrique\Concrete\FabriqueTyrrWarrior.cs" />
     <Compile Include="Fabrique\Concrete\FabriqueWynnSummoner.cs" />
     <Compile Include="Fabrique\Concrete\FabriqueYulArcher.cs" />
-    <Compile Include="Decorateur\Personnage\Concret\AeoreHealer.cs" />
-    <Compile Include="Composite\Armes\Concrete\Arc.cs" />
-    <Compile Include="Composite\Armes\Abstraite\ArmeAbstraite.cs" />
-    <Compile Include="Composite\Armes\Concrete\Dague.cs" />
-    <Compile Include="Composite\Armes\Concrete\Dual.cs" />
-    <Compile Include="Composite\Armure\Abstraite\ArmureAbstraite.cs" />
-    <Compile Include="Composite\Armure\Concrete\ArmureLegere.cs" />
-    <Compile Include="Composite\Armure\Concrete\ArmureLourde.cs" />
-    <Compile Include="Composite\Bijou\Concret\Bague.cs" />
-    <Compile Include="Composite\Bijou\Abstrait\BijouAbstrait.cs" />
-    <Compile Include="Composite\Bijou\Concret\BoucleOreille.cs" />
-    <Compile Include="Composite\Bijou\Concret\Collier.cs" />
+    <Compile Include="Strategie\Personnage\Concret\AeoreHealer.cs" />
+    <Compile Include="Strategie\Armes\Concrete\Arc.cs" />
+    <Compile Include="Strategie\Armes\Abstraite\ArmeAbstraite.cs" />
+    <Compile Include="Strategie\Armes\Concrete\Dague.cs" />
+    <Compile Include="Strategie\Armes\Concrete\Dual.cs" />
+    <Compile Include="Strategie\Armure\Abstraite\ArmureAbstraite.cs" />
+    <Compile Include="Strategie\Armure\Concrete\ArmureLegere.cs" />
+    <Compile Include="Strategie\Armure\Concrete\ArmureLourde.cs" />
+    <Compile Include="Strategie\Bijou\Concret\Bague.cs" />
+    <Compile Include="Strategie\Bijou\Abstrait\BijouAbstrait.cs" />
+    <Compile Include="Strategie\Bijou\Concret\BoucleOreille.cs" />
+    <Compile Include="Strategie\Bijou\Concret\Collier.cs" />
     <Compile Include="Enum\EnumBijou.cs" />
     <Compile Include="Enum\EnumArmure.cs" />
     <Compile Include="Enum\EnumArmes.cs" />
-    <Compile Include="Composite\Armes\Concrete\Epee.cs" />
-    <Compile Include="Decorateur\Personnage\Concret\FeohWizard.cs" />
-    <Compile Include="Decorateur\Personnage\Concret\IssEnchanter.cs" />
-    <Compile Include="Decorateur\Personnage\Concret\OthellRogue.cs" />
-    <Compile Include="Decorateur\Personnage\Abstrait\PersonnageAbstrait.cs" />
-    <Compile Include="Decorateur\Personnage\Abstrait\PersonnageFighterAbstrait.cs" />
-    <Compile Include="Decorateur\Personnage\Abstrait\PersonnageMysticAbstrait.cs" />
+    <Compile Include="Strategie\Armes\Concrete\Epee.cs" />
+    <Compile Include="Strategie\Personnage\Concret\FeohWizard.cs" />
+    <Compile Include="Strategie\Personnage\Concret\IssEnchanter.cs" />
+    <Compile Include="Strategie\Personnage\Concret\OthellRogue.cs" />
+    <Compile Include="Strategie\Personnage\Abstrait\PersonnageAbstrait.cs" />
+    <Compile Include="Strategie\Personnage\Abstrait\PersonnageFighterAbstrait.cs" />
+    <Compile Include="Strategie\Personnage\Abstrait\PersonnageMysticAbstrait.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Composite\Armes\Concrete\Sceptre.cs" />
-    <Compile Include="Composite\Armure\Concrete\Robe.cs" />
-    <Compile Include="Decorateur\Personnage\Concret\SigelKnight.cs" />
-    <Compile Include="Decorateur\Personnage\Concret\TyrrWarrior.cs" />
-    <Compile Include="Decorateur\Personnage\Concret\WynnSummoner.cs" />
-    <Compile Include="Decorateur\Personnage\Concret\YulArcher.cs" />
+    <Compile Include="Strategie\Armes\Concrete\Sceptre.cs" />
+    <Compile Include="Strategie\Armure\Concrete\Robe.cs" />
+    <Compile Include="Strategie\Personnage\Concret\SigelKnight.cs" />
+    <Compile Include="Strategie\Personnage\Concret\TyrrWarrior.cs" />
+    <Compile Include="Strategie\Personnage\Concret\WynnSummoner.cs" />
+    <Compile Include="Strategie\Personnage\Concret\YulArcher.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Composite\" />
+    <Folder Include="Decorateur\" />
     <Folder Include="Etat\" />
     <Folder Include="FabriqueAbstraite\" />
     <Folder Include="Observateur\" />
     <Folder Include="Singleton\" />
-    <Folder Include="Strategie\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
